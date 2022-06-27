@@ -1,5 +1,5 @@
 """
-ASGI config for shoppinglyx project.
+ASGI config for homeshop18 project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'shoppinglyx.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'homeshop18.settings')
 
 application = get_asgi_application()

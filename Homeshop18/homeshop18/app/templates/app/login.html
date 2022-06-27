@@ -17,7 +17,7 @@
     <small><a href=" ">Forgot Password ?</a></small><br>
     <input type="Submit" class="btn btn-primary mt-4" value="Login">
     <br>
-    <div class="text-center text-primery fw-bold"><small>New to ShoppinglyX? <a href="{% url 'customerregistration' %}" class="text-danger">Create New Account</a></small></div>
+    <div class="text-center text-primery fw-bold"><small>New to homeshop18? <a href="{% url 'customerregistration' %}" class="text-danger">Create New Account</a></small></div>
     {% if error in gorm.non_field_errors%}
         {% for error in form.non_field_errors %}
         <p class="alert alert-danger my-3">{{error}}</p>
