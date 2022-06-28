@@ -61,7 +61,7 @@
             {% if request.user.is_authenticated%}
            <li class="nav-item dropdown mx-2">
               <a class="nav-link dropdown-toggle text-white" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Sonam
+                {{request.user.username|capfirst}}
               </a>
               <ul class="dropdown-menu" aria-labelledby="profileDropdown">
                 <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
@@ -92,7 +92,7 @@
 
     <!-- Start Footer -->
     <footer class="container-fluid bg-dark text-center p-2 mt-5">
-        <small class="text-white">Copyright &copy; 2021 || Designed By GeekyShows || </small>
+        <small class="text-white">Copyright &copy; 2021 || Designed By Placid Digital || </small>
         <img src="{% static 'app/images/payment.png' %}" alt="" srcset="" class="img-fluid" height="2px">
     </footer> <!-- End Footer -->
 
