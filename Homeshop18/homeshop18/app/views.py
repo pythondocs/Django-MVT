@@ -3,13 +3,8 @@ from django.views import View
 from .models import Customer, Product, Cart, OrderPlaced
 from .forms import CustomerRegistrationForm, CustomerProfileForm
 from django.contrib import messages
-# from django.contrib.auth.views import (
-# login, 
-# logout, 
-# password_reset, 
-# password_reset_done, 
-# password_reset_confirm,
-# ) 
+
+
 
 # def home(request):
 #  return render(request, 'app/home.html')
