@@ -168,6 +168,29 @@ def laptop(request, data=None):
         laptops = Product.objects.filter(category='L').filter(discounted_price__gt=25000)
     return render(request, 'app/laptop.html',{'laptops':laptops})
 
+def topwear(request, data=None):
+    if data == None:
+        topwears = Product.objects.filter(category='TW')
+    elif data=='ZARA' or data== 'GUCCI':
+        topwears = Product.objects.filter(category='TW').filter(brand=data)
+    elif data == 'below':
+        topwears = Product.objects.filter(category='TW').filter(discounted_price__lt=1000)
+    elif data == 'above':
+        topwears = Product.objects.filter(category='TW').filter(discounted_price__gt=1000)
+    return render(request, 'app/topwear.html',{'topwears':topwears})
+
+
+def bottomwear(request, data=None):
+    if data == None:
+        bottomwears = Product.objects.filter(category='BW')
+    elif data=='ZARA' or data== 'GUCCI':
+        bottomwears = Product.objects.filter(category='BW').filter(brand=data)
+    elif data == 'below':
+        bottomwears = Product.objects.filter(category='BW').filter(discounted_price__lt=1000)
+    elif data == 'above':
+        bottomwears = Product.objects.filter(category='BW').filter(discounted_price__gt=1000)
+    return render(request, 'app/bottomwear.html',{'bottomwears':bottomwears})
+
 
 # def login(request):
 #  return render(request, 'app/login.html')
